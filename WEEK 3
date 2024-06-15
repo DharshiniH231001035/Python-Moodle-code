@@ -1,0 +1,260 @@
+#Write a program to find the eligibility of admission for a professional course based on the following criteria:
+a=int(input())
+
+b=int(input())
+
+c=int(input())
+
+if(a>=65 and b>=55 and c>=50):
+
+    print("The candidate is eligible")
+
+elif(a+b+c>=180):
+
+    print("The candidate is eligible")
+
+else:
+
+    print("The candidate is not eligible")
+
+
+#A triangle can be classified based on the lengths of its sides as equilateral, isosceles or scalene. All three sides of an equilateral triangle have the same length. An isosceles triangle has two sides that are the same length, and a third side that is a different length. If all of the sides have different lengths then the triangle is scalene.Write a program that reads the lengths of the three sides of a triangle from the user. Then display a message that states the triangle’s type.
+a=int(input())
+
+b=int(input())
+
+c=int(input())
+
+if(a==b and b==c):
+
+    print("That's a equilateral triangle")
+
+elif(a!=b and b==c or a==b and b!=c):
+
+    print("That's a isosceles triangle")
+
+elif(a!=b and b!=c):
+
+    print("That's a scalene triangle")
+
+#Write a program to calculate and print the Electricity bill where the unit consumed by the user is given from test case. It prints the total amount the customer has to pay. The charge are as follows: 
+a=float(input())
+
+b=0
+
+if(a<=199):
+
+    b=a*1.2
+
+elif(200<=a<400):
+
+    b=a*1.5
+
+elif(400<=a<600):
+
+    b=a*1.8
+
+elif(a>600):
+
+    b=a*2.0
+
+if (int(b)<100):
+
+    print("{:.2f}".format(100))
+
+else:
+
+    if(b>400.00):
+
+        print("{:.2f}".format((b+(b*0.15))))
+
+    else:
+
+        print("{:.2f}".format(b))
+
+#Ms. Sita, the faculty handling programming lab for you is very strict. Your seniors have told you that she will not allow you to enter the week's lab if you have not completed atleast half the number of problems given last week. Many of you didn't understand this statement and so they requested the good programmers from your batch to write a program to find whether a student will be allowed into a week's lab given the number of problems given last week and the number of problems solved by the student in that week.
+a=int(input())
+
+b=int(input())
+
+c=(a/2)
+
+if(c>b):
+
+    print("OUT")
+
+else:
+
+    print("IN")
+
+#In this exercise you will create a program that reads a letter of the alphabet from the user. If the user enters a, e, i, o or u then your program should display a message indicating that the entered letter is a vowel. If the user enters 'y' then your program should display a message indicating that sometimes y is a vowel, and sometimes y is a consonant. Otherwise your program should display a message indicating that the letter is a consonant.
+a=input()
+
+if(a=='a' or a=='e' or a=='i' or a=='o' or a=='u'):
+
+    print("It's a vowel.")
+
+elif(a=='y'):
+
+    print("Sometimes it's a vowel... Sometimes it's a consonant.")
+
+else:
+
+    print("It's a consonant.")
+#Write a program that reads a year from the user and displays a message indicating whether or not it is a leap year.
+year=int(input())
+
+if(year%400==0):
+
+    print(year,"is a leap year.")
+
+else:
+
+    print(year,"is not a leap year.")
+#The length of a month varies from 28 to 31 days. In this exercise you will create a program that reads the name of a month from the user as a string. Then your program should display the number of days in that month. Display “28 or 29 days” for February so that leap years are addressed.
+m=input()
+
+if(m=="January"):
+
+    print(m,"has 31 days in it.")
+
+elif(m=="February"):
+
+    print(m,"has 28 or 29 days in it.")
+
+elif(m=="March"):
+
+    print(m,"has 31 days in it.")
+
+elif(m=="April"):
+
+    print(m,"has 30 days in it.")
+
+elif(m=="May"):
+
+    print(m,"has 31 days in it.")
+
+elif(m=="June"):
+
+    print(m,"has 30 days in it.")
+
+elif(m=="July"):
+
+    print(m,"has 31 days in it.")
+
+elif(m=="August"):
+
+    print(m,"has 31 days in it.")
+
+elif(m=="September"):
+
+    print(m,"has 30 days in it.")
+
+elif(m=="October"):
+
+    print(m,"has 31 days in it.")
+
+elif(m=="November"):
+
+    print(m,"has 30 days in it.")
+
+elif(m=="December"):
+
+    print(m,"has 31 days in it.")
+#Three numbers form a Pythagorean triple if the sum of squares of two numbers is equal to the square of the third.
+
+a=int(input())
+
+b=int(input())
+
+c=int(input())
+
+if(a*a+b*b==c*c):
+
+    print("yes")
+
+elif(a*a+c*c==b*b):
+
+    print("yes")
+
+elif(c*c+b*b==a*a):
+
+    print("yes")
+
+else:
+
+    print("no")
+
+#Write a program that returns the second last digit of the given number. Second last digit is being referred 10the digit in the tens place in the given number.
+a=int(input())
+
+b=str(abs(a))
+
+l=len(b)
+
+if(l>1):
+
+    print(int(b[-2]))
+
+else:
+
+    print(-1)
+
+#Write a program that reads a year from the user and displays the animal associated with that year. Your program should work correctly for any year greater than or equal to zero, not just the ones listed in the table.
+a=int(input())
+
+b=a%100
+
+c=b%12
+
+if(c==0):
+
+    print(a,"is the year of the Dragon.")
+
+elif(c==1):
+
+    print(a,"is the year of the Snake.")
+
+elif(c==2):
+
+    print(a,"is the year of the Horse.")
+
+elif(c==3):
+
+    print(a,"is the year of the Sheep.")
+
+elif(c==4):
+
+    print(a,"is the year of the Monkey.")
+
+elif(c==5):
+
+    print(a,"is the year of the Rooster.")
+
+elif(c==6):
+
+    print(a,"is the year of the Dog.")
+
+elif(c==7):
+
+    print(a,"is the year of the Pig.")
+
+elif(c==8):
+
+    print(a,"is the year of the Rat.")
+
+elif(c==9):
+
+    print(a,"is the year of the Ox.")
+
+elif(c==10):
+
+    print(a,"is the year of the Tiger.")
+
+elif(c==11):
+
+    print(a,"is the year of the Hare.")
+
+
+
+#
