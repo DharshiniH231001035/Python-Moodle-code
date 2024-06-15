@@ -1,0 +1,436 @@
+#Given an array of numbers, find the index of the smallest array element (the pivot), for which the sums of all elements to the left and to the right are equal. The array may not be reordered.
+a=int(input())
+
+l=[]
+
+for i in range(a):
+
+    c=int(input())
+
+    l.append(c)
+
+for i in range(1,a):
+
+    d=sum(l[0:i])
+
+    r=sum(l[i+1:])
+
+    if(d==r):
+
+        print(i)
+#Given an array A of sorted integers and another non negative integer k, find if there exists 2 indices i and j such that A[i] - A[j] = k, i != j.
+a=int(input())
+
+while(a!=0):
+
+    b=int(input())
+
+    l=[]
+
+    f=0
+
+    for i in range(b):
+
+        c=int(input())
+
+        l.append(c)
+
+    k=int(input())
+
+    a-=1
+
+    for i in range(b):
+
+        for j in range(b):
+
+            if(l[i]-l[j]==k and i!=j):
+
+                f=1
+
+                break
+
+    if(f==1):
+
+        print(1)
+
+    else:
+
+        print(0)
+#Complete the program to count frequency of each element of an array. Frequency of a particular element will be printed once.
+import collections 
+
+def CountFrequency(arr):
+
+	return collections.Counter(arr)
+
+ 
+
+if __name__ == "__main__":
+
+	# Input size of array
+
+	n = int(input())
+
+	
+
+	# Input elements in array
+
+	arr = []
+
+	for _ in range(n):
+
+    	ele = int(input())
+
+    	arr.append(ele)
+
+	
+
+	# Calculate frequency of each element
+
+	freq = CountFrequency(arr)
+
+ 
+
+ 
+
+	for key, value in freq.items():
+
+    	print(f"{key} occurs {value} times")
+
+#Program to print all the distinct elements in an array. Distinct elements are nothing but the unique (non-duplicate) elements present in the given array.
+def merge_arrays_without_duplicates(arr1, arr2):
+
+    # Combine the arrays and convert to a set to remove duplicates
+
+    result_set = set(arr1 + arr2)
+
+    # Convert the set back to a sorted list
+
+    merged_sorted_array = sorted(result_set)
+
+    return merged_sorted_array
+
+ 
+
+# Input read and processing
+
+def process_input():
+
+    # Reading number of elements and the elements for the first array
+
+    n1 = int(input())
+
+    array1 = []
+
+    for _ in range(n1):
+
+        element = int(input())
+
+        array1.append(element)
+
+ 
+
+    # Reading number of elements and the elements for the second array
+
+    n2 = int(input())
+
+    array2 = []
+
+    for _ in range(n2):
+
+        element = int(input())
+
+        array2.append(element)
+
+ 
+
+    # Merge the arrays without duplicates
+
+    result = merge_arrays_without_duplicates(array1, array2)
+
+ 
+
+    # Print the result
+
+    print(" ".join(map(str, result)))
+#Consider a program to insert an element / item in the sorted array. Complete the logic by filling up required code in editable section. Consider an array of size 10. The eleventh item is the data is to be inserted
+def insert_sorted(list, n):
+
+    list.append(n)
+
+    sorted_list = sorted(list)
+
+    print("After insertion array is:")
+
+    for i in range(11):
+
+        print(sorted_list[i])
+
+ 
+
+sorted_list = [int(input()) for i in range(10)]
+
+new_element = int(input())
+
+print("ITEM to be inserted:", new_element, sep='')
+
+insert_sorted(sorted_list, new_element)
+#Determine the factors of a number (i.e., all positive integer values that evenly divide into a number) and then return the pth element of the list, sorted ascending. If there is no pth element, return 0.
+import sys
+
+import math
+
+ 
+
+def find_factors(n):
+
+	factors = []
+
+	for i in range(1, int(math.sqrt(n)) + 1):
+
+    	if n % i == 0:
+
+        	factors.append(i)
+
+        	if i != n // i:
+
+            	factors.append(n // i)
+
+	return sorted(factors)
+
+ 
+
+def get_pth_factor(n, p):
+
+	factors = find_factors(n)
+
+	if p <= len(factors):
+
+    	return factors[p - 1]
+
+	else:
+
+    	return 0
+
+ 
+
+# Reading input directly from the standard input (typically for competitive programming)
+
+input = sys.stdin.read
+
+data = input().split()
+
+n = int(data[0])
+
+p = int(data[1])
+
+ 
+
+# Calculate and print the p-th factor
+
+print(get_pth_factor(n, p))
+#Write a Python program to Zip two given lists of lists.
+def zip_lists(list1, list2):
+
+    return [row1 + row2 for row1, row2 in zip(list1, list2)]
+
+ 
+
+def main():
+
+    m = int(input())
+
+    n = int(input())
+
+ 
+
+ 
+
+    list1 = [[int(input()) for _ in range(n)] for _ in range(m)]
+
+    list2 = [[int(input()) for _ in range(n)] for _ in range(m)]
+
+ 
+
+    zipped_list = zip_lists(list1, list2)
+
+    print(zipped_list)
+
+ 
+
+if __name__ == "__main__":
+
+    main()
+#Output is a merged array without duplicates.
+
+Input Format
+
+N1 - no of elements in array 1
+
+Array elements for array 1
+
+N2 - no of elements in array 2
+
+Array elements for array2
+
+Output Format
+
+Display the merged array
+#def merge_arrays_without_duplicates(arr1, arr2):
+
+    # Combine the arrays and convert to a set to remove duplicates
+
+    result_set = set(arr1 + arr2)
+
+    # Convert the set back to a sorted list
+
+    merged_sorted_array = sorted(result_set)
+
+    return merged_sorted_array
+
+ 
+
+# Input read and processing
+
+def process_input():
+
+    # Reading number of elements and the elements for the first array
+
+    n1 = int(input())
+
+    array1 = []
+
+    for _ in range(n1):
+
+        element = int(input())
+
+        array1.append(element)
+
+ 
+
+    # Reading number of elements and the elements for the second array
+
+    n2 = int(input())
+
+    array2 = []
+
+    for _ in range(n2):
+
+        element = int(input())
+
+        array2.append(element)
+
+ 
+
+    # Merge the arrays without duplicates
+
+    result = merge_arrays_without_duplicates(array1, array2)
+
+ 
+
+    # Print the result
+
+    print(" ".join(map(str, result)))
+#Write a program to print all the locations at which a particular element (taken as input) is found in a list and also print the total number of times it occurs in the list. The location starts from 1.
+def find_element_locations(lst, target):
+
+    locations = []
+
+    count = 0
+
+    for i in range(len(lst)):
+
+        if lst[i] == target:
+
+        	locations.append(i + 1)
+
+        	count += 1
+
+   
+
+    return locations, count
+
+ 
+
+def main():
+
+    n = int(input())
+
+    lst = [int(input()) for _ in range(n)]
+
+    target = int(input())
+
+ 
+
+    locations, count = find_element_locations(lst, target)
+
+ 
+
+    if count == 0:
+
+        print(f"{target} is not present in the array.")
+
+    else:
+
+        for loc in locations:
+
+        	print(f"{target} is present at location {loc}.")
+
+        print(f"{target} is present {count} times in the array.")
+
+ 
+
+if __name__ == "__main__":
+
+    main()
+
+
+#Write a Python program to check if a given list is strictly increasing or not. Moreover, If removing only one element from the list results in a strictly increasing list, we still consider the list true
+n= int(input())
+
+arr = [int(input()) for i in range(n)]
+
+l = arr.copy()
+
+g=0
+
+size = len(arr)
+
+arr_asc = sorted(arr)
+
+arr_des = sorted(arr)[::-1]
+
+if arr==arr_asc or arr==arr_des:
+
+    print('True')
+
+    g=1
+
+else:
+
+    for i in arr:
+
+        l.remove(i)
+
+        arr_asc.remove(i)
+
+        arr_des.remove(i)
+
+        if l==arr_asc or l==arr_des:
+
+        	print('True')
+
+        	g=1
+
+        	break
+
+        l=arr.copy()
+
+        arr_asc = sorted(arr)
+
+        arr_des = sorted(arr)[::-1]
+
+if g==0:
+
+    print('False')
+
