@@ -1,0 +1,68 @@
+#Write a program to convert strings to an integer and float and display its type.
+a=input()
+
+b=input()
+
+c=int(a)
+
+d=float(b)
+
+print(c,type(c),sep=",")
+
+print("{:0.1f}".format(d),type(d),sep=",")
+
+#Ramesh’s basic salary is input through the keyboard. His dearness allowance is 40% of his basic salary, and his house rent allowance is 20% of his basic salary. Write a program to calculate his gross salary.
+
+s=int(input())
+
+da=s*0.4
+
+ha=s*0.2
+
+print(int(s+da+ha))
+
+#Write a simple python program to find the square root of a given floating point number. The output should be displayed with 3 decimal places.
+
+import math
+
+a=float(input())
+
+s=math.sqrt(a)
+
+print("{:.3f}".format(s))
+
+#Alfred buys an old scooter for Rs. X and spends Rs. Y on its repairs. If he sells the scooter for Rs. Z (Z>X+Y). Write a program to help Alfred to find his gain percent. Get al
+
+buys=int(input())
+
+repair=int(input())
+
+sells=int(input())
+
+g=(((sells-(buys+repair))/(buys+repair))*100)
+
+print("{:.2f}".format(g), "is the gain percent.")
+
+#many jurisdictions, a small deposit is added to drink containers to encourage people to recycle them. In one particular jurisdiction, drink containers holding one liter or less have a $0.10 deposit and drink containers holding more than one liter have a $0.25 deposit. Write a program that reads the number of containers of each size(less and more)  from the user. Your program should continue by computing and displaying the refund that will be received for returning those containers. Format the output so that it includes a dollar sign and always displays exactly two decimal places.
+
+a=int(input())
+
+b=int(input())
+
+c=a*0.1
+
+d=b*0.25
+
+e=c+d
+
+print("Your total refund will be ${:.2f}.".format(e))
+
+#Justin is a carpenter who works on an hourly basis. He works in a company where he is paid Rs 50 for an hour on weekdays and Rs 80 for an hour on weekends. He works 10 hrs more on weekdays than weekends. If the salary paid for him is given, write a program to find the number of hours he has worked on weekdays and weekends.
+	s=int(input())
+
+	a=(500-s)/130
+
+	print("weekdays {:.2f}".format(abs(a)+10))
+
+	print("weekend {:.2f}".format(abs(a)))
+#
